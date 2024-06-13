@@ -138,5 +138,8 @@ Route::get('/category/{slug}', [FrontendCategoryController::class,'show'])->name
 
 Route::get('/product/{categoriSlug}/{productSlug}',[FrontendProductController::class,'show'])->name('product.show');
 
+Route::get('/contact', function () {
+    return view('frontend.contact.index');
+});
 
 require __DIR__ . '/auth.php';
